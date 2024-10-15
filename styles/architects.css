@@ -3,6 +3,9 @@
 *{
     font-family: "Work Sans", sans-serif;
 }
+.text-light-grey{
+    color: #727272;
+}
 header {
     background: rgba(255, 144.05, 13.81, 0.10);
     padding: 50px 240px;
@@ -16,15 +19,15 @@ header {
     cursor: pointer;
     border: none;
 }
+.section-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #131313;
+}
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.nav-title{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #131313;
 }
 nav>ul{
     display: flex;
@@ -52,9 +55,7 @@ nav li a{
     font-weight: 700;
     color: #131313;
 }
-.banner-description{
-    color: #727272;
-}
+
 .banner-img{
     margin-top: 32px;
     width: 100%;
@@ -64,7 +65,7 @@ nav li a{
 
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 /* Teams style */
 .teams-container{
@@ -91,21 +92,75 @@ main{
     font-weight: 700;
 }
 
+/* features section start */
+
+
+/* Facts section */
+
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px 30px;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Sponsors section styles start */
+
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
 /* Responsive media queries */
 
 @media screen and (max-width: 576px) {
     header{
         padding: 20px;
     }
-    nav{
+    nav,
+    .teams-container,
+    .facts-card-container{
         flex-direction: column;
+    }
+    .teams-img-container{
+        grid-template-columns: 1fr;
+    }
+    .teams-content,
+    .facts-card-container{
+        padding: 0 20px;
+    }
+    .facts-card-container{
+        gap: 20px;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
     header{
         padding: 50px;
     }
-    nav{
+    nav,
+    .teams-container{
         flex-direction: column;
     }
 }
